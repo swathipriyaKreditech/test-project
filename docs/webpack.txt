@@ -1,0 +1,5 @@
+The goal of this is to get familiar with webpack terms and the goal of using it. For this on webpack official site read about Loaders : https://webpack.js.org/concepts/loaders/ and plugins https://webpack.js.org/concepts/plugins/.
+
+Next step will be to learn how to create a production build with webpack and how to optimize it. For this please read https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579
+
+*Optional: read about rollup and parcel module bundlers and understand the difference between them and the situation to use. 

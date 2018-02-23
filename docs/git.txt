@@ -1,0 +1,10 @@
+The goal of this file is to get familiar with git.
+
+1) Learn about git merge vs git rebase, what is the difference between them and understand in which situation to use one
+or another. Here an article: https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+2) Learn about git rebase interactive: https://git-scm.com/book/id/v2/Git-Tools-Rewriting-History
+3) Read  about history rewrite
+4) Read about pull request and how to create one https://yangsu.github.io/pull-request-tutorial/
+5) Read about code review and best practices https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/
+
+*The links are only suggestive , feel free to search more if these don't cover enough the topic.
