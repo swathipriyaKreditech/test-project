@@ -20,15 +20,15 @@ const AppContainer = () => (
                 </li>
             </ul>
 
-            <Route path="/login" component={login} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/loginn" component={login} />
+            <Route path="/profilee" component={profile} />
 
         </div>
     </Router>
 );
 
 
-const Profile = () => (
+const profile = () => (
     <div>
         <h2>User Details</h2>
         <Link to="/HomePage">Back</Link>

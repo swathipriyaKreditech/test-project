@@ -1,11 +1,20 @@
 body {
-    background-color: #d8ff2b;
+
+    background-color: #813777;
     padding: 20px;
     margin: 0;
 }
-h1, h2, p, ul, li {
+h1  {
     font-family: sans-serif;
-    background-color: #ffa315;
+
+    color: #c81d1b;
+}
+.headerstyles
+{
+    align-items: center;
+    margin-top:50px;
+    margin-left: 620px;
+    color: #FFF;
 }
 ul.header li {
     display: inline;
@@ -33,6 +42,78 @@ ul.header li a {
 }
 .content li {
     margin-bottom: 10px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+.loginStyle {
+
+    color: #FFF;
+    font-size: larger;
+    font-style: italic;
+    padding: 50px 50px;
+    margin: 100px 700px 800px 500px;
+    background-color: #a37291;
+    border: 5px solid black;
+}
+.tableStyle {
+    align-content: center;
+    align-items: center;
+    margin: 100px 700px 800px 800px;
+    color: #FFF;
+    padding: 500px 500px;
+    background-color: #a37291;
+    border: 80px solid black;
+}
+.profileStyle {
+    width: 500px;
+    height: 500px;
+    color: #FFF;
+    font-size: larger;
+    font-style: italic;
+    padding: 10px 10px;
+    margin: 50px 100px 500px 450px;
+    background-color: #a37291;
+    border: 5px solid black;
+}
+.profilebodyStyle {
+    align-content: center;
+    align-items: center;
+    margin: 100px 700px 800px 800px;
+    color: #FFF;
+    background-color: #a37291;
+    border: 80px solid black;
+}
+.submit
+{
+    font-style: normal;
+    background-color: #ffffff;
+    border: 2px solid white;
+    color: #6e3452;
+}
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.submit a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 
