@@ -56,7 +56,7 @@ class LoginPage extends React.Component {
                             </label>
                         </td>
                         <td>
-                            <input type="text" value={this.state.pwd} onChange={this.handleChangePwd}/></td>
+                            <input type="password" value={this.state.pwd} onChange={this.handleChangePwd}/></td>
                     </tr>
                     <tr>
                         <td></td>

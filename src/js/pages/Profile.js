@@ -12,23 +12,33 @@ class ProfilePage extends React.Component {
                 country: '',
                 Birthday: ''
             };
-        this.onLoad = this.onLoad.bind(this);
+
+
     }
 
-    onLoad(props) {
-             console.log('On load fired!');
-        alert('hi');
-            if (this.state.name == 'swathi' ) {
-                this.setState(
-                    {country: 'India', Birthday:'Dec 12'});
-            }
-            return ;
+    componentDidMount() {
+        if (this.state.name == 'swathi' ) {
+            this.setState(
+                {country: 'India', Birthday:'Dec 12'});
+        }
+       else if (this.state.name == 'priya' ) {
+            this.setState(
+                {country: 'India', Birthday:'Jan 12'});
+        }
+        if (this.state.name == 'test' ) {
+            this.setState(
+                {country: 'Italy', Birthday:'Feb 12'});
         }
 
-    render(){
+
+    }
+
+
+    render (){
+
         return (
-            <div>
-            <h2 className="headerstyles">User Details </h2>
+            <div >
+            <h2 className="headerstyles" >Welcome {this.state.name} </h2>
             <table className="profileStyle">
                 <tbody className="profilebodyStyle">
                 <tr><td>Name :</td>
