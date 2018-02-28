@@ -36,11 +36,11 @@ class LoginPage extends React.Component {
     render() {
         return (
 
-            <form onSubmit={this.handleSubmit}>
+            <form  className="formStyle" onSubmit={this.handleSubmit}>
                 <br/>
                 <br/>
                 <table className="loginStyle">
-                    <tbody className="tableStyle">
+                    <tbody >
                     <tr>
                         <td><label>
                             Name:
@@ -52,7 +52,7 @@ class LoginPage extends React.Component {
                         <td>
                             <label>
 
-                                Passwords:
+                                Password:
                             </label>
                         </td>
                         <td>

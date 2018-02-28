@@ -1,0 +1,75 @@
+
+body {
+  background: url('./js/background.jpg') no-repeat;
+  background-size: 100%;
+}
+h1,h2
+{
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  text-shadow: 1px 1px 2px black, 0 0 25px #94ff15, 0 0 5px darkblue;
+}
+.formStyle {
+  display: flex;
+  justify-content: center;
+
+}
+.loginStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: larger;
+  font-style: italic;
+  width: 400px;
+  height:300px;
+  background: url('./js/table.jpg') no-repeat;
+  opacity: 0.8;
+}
+
+.profileStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self:center;
+
+}
+
+.topnav  {
+  display: flex;
+  justify-content: center;
+  background: url('./js/navbar.jpg') no-repeat;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px #000000;
+  background-size: 100%;
+  a {
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  &:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  a.active {
+    background: linear-gradient(#953816, #18770d);
+
+    color: white;
+  }
+}
+.submit
+{
+  font-style: normal;
+  background-color: #ffffff;
+  border: 2px solid white;
+  color: #6e3452;
+  cursor: pointer;
+}
+
+
+
+

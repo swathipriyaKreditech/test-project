@@ -37,11 +37,11 @@ class ProfilePage extends React.Component {
     render (){
 
         return (
-            <div >
-            <h2 className="headerstyles" >Welcome {this.state.name} </h2>
-            <table className="profileStyle">
-                <tbody className="profilebodyStyle">
-                <tr><td>Name :</td>
+            <div className="profileStyle">
+
+            <table className="loginStyle">
+                <tbody >
+                <tr><td >Name :</td>
                     <td>{this.state.name}
                    </td></tr>
                 <tr><td>Password :</td>

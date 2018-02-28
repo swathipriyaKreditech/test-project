@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import LoginPage from './pages/Login';
 import ProfilePage from './pages/Profile';
-import './index.css';
+import './styles.scss';
 class App extends React.Component {
 
     render() {
@@ -12,6 +12,7 @@ class App extends React.Component {
             <Router>
                 <div>
             <div className="topnav">
+
                 <Link className="active" to="/login">Login</Link>
                 <Link to="/news">News</Link>
                 <Link to="/contact">Contact</Link>
@@ -19,6 +20,7 @@ class App extends React.Component {
 
 
             </div>
+                    <h1>Welcome</h1>
                 <div>
                     <Route exact path="/login" component={LoginPage}/>
                     <Route exact path="/profile" component={ProfilePage}/>

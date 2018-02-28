@@ -19,9 +19,27 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader?url=false','resolve-url-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader?url=false'
+                }, {
+                    loader: 'sass-loader'
+                }
+                    , {
+                        loader: 'resolve-url-loader'
+                    }]
+            },
+            {
+                        test: /\.(png|jpg|svg)$/,
+                        loader: 'url-loader'
+
             }
-        ]
+                ]
     },
     plugins: [
         new HtmlWebPackPlugin({
