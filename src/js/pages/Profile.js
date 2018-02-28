@@ -40,7 +40,9 @@ class ProfilePage extends React.Component {
             <div className="profileStyle">
 
             <table className="loginStyle">
+
                 <tbody >
+
                 <tr><td >Name :</td>
                     <td>{this.state.name}
                    </td></tr>

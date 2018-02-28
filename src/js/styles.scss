@@ -31,9 +31,6 @@ h1,h2
 .profileStyle {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-self:center;
-
 }
 
 .topnav  {
@@ -44,22 +41,20 @@ h1,h2
   text-shadow: 2px 2px 4px #000000;
   background-size: 100%;
   a {
-
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    &:hover {
+      background: linear-gradient(#953816, #18770d);
+      color: #3b5e61;
+    }
+    &:active {
+      color: white;
+    }
   }
-  &:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  a.active {
-    background: linear-gradient(#953816, #18770d);
 
-    color: white;
-  }
 }
 .submit
 {

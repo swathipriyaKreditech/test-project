@@ -4,36 +4,43 @@ import LoginPage from './pages/Login';
 import ProfilePage from './pages/Profile';
 import './styles.scss';
 class App extends React.Component {
-
+    constructor(props) {
+        super(props);
+        const partial={};
+    }
     render() {
 
-        return (
+        return <Router>
+            <div>
+                <div className="topnav">
+                    <Link  to="/Home">Home</Link>
+                    <Link  to="/login">Login</Link>
+                    <Link to="/news">News</Link>
 
-            <Router>
+                    <Link to="/contact">Contact</Link>
+                    <Link to="/about">About</Link>
+
+
+                </div>
+                <h1>Welcome</h1>
                 <div>
-            <div className="topnav">
-
-                <Link className="active" to="/login">Login</Link>
-                <Link to="/news">News</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/about">About</Link>
-
-
-            </div>
-                    <h1>Welcome</h1>
-                <div>
+                    <Route exact path="/Home" component={Home}/>
                     <Route exact path="/login" component={LoginPage}/>
                     <Route exact path="/profile" component={ProfilePage}/>
                     <Route exact path="/news" component={News}/>
                     <Route exact path="/contact" component={Contact}/>
                     <Route exact path="/about" component={About}/>
-</div>
                 </div>
-            </Router>
-
-        );
+            </div>
+        </Router>;
     }
 }
+const Home = () => (
+    <div className="profileStyle">
+        <h2>Good Day :) </h2>
+
+    </div>
+);
 const News = () => (
     <div className="profileStyle">
         <h2>News </h2>
