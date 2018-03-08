@@ -1,14 +1,15 @@
 {
-  "name": "MyProject",
+  "name": "myproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "server",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "start:server": "node src/server/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Swathi",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -29,9 +30,24 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "hapi": "^17.2.2",
+    "inert": "^5.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^2.0.1",
-    "react-router-dom": "^4.2.2"
-  }
+    "react-router-dom": "^4.2.2",
+    "save": "^2.3.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swathipriyaKreditech/test-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swathipriyaKreditech/test-project/issues"
+  },
+  "homepage": "https://github.com/swathipriyaKreditech/test-project#readme"
 }
