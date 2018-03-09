@@ -20,15 +20,12 @@ class LoginPage extends React.Component {
         const target = event.target;
         this.setState(
             {name: target.value});
-
-
     }
 
     handleChangePwd(event) {
         const target = event.target;
         this.setState(
             {pwd: target.value});
-
     }
 
     handleSubmit() {
@@ -41,74 +38,59 @@ class LoginPage extends React.Component {
                     localStorage.setItem('password',this.state.pwd);
                     this.props.history.push('/Profile');
                 }
-
-              })
+            })
             .catch(err => {
                 this.setState(
                     {msg: 'User not found'});
-
-            })
+            });
     }
-
 
     render() {
-        return ( <form  className="formStyle" onSubmit={this.handleSubmit}>
-            <br/>
-            <br/>
-            <table className="loginStyle">
-                <tbody >
-                <tr>
-                    <td><label>
-                        Name:
-                    </label></td>
-                    <td>
-                        <input type="text" value={this.state.name} onChange={this.handleChangeName}/></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-
-                            Password:
-                        </label>
-                    </td>
-                    <td>
-                        <input type="password" value={this.state.pwd} onChange={this.handleChangePwd}/></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="button" className="submit"  value="Submit" onClick={this.handleSubmit}/>
-
-
-                    </td>
-
-
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> <span >{this.state.msg}</span></td>
-
-                </tr>
-                </tbody>
-            </table>
-
-        </form>
-    );
+        return (
+            <form  className="formStyle" onSubmit={this.handleSubmit}>
+                <br/>
+                <br/>
+                <table className="loginStyle">
+                    <tbody >
+                    <tr>
+                        <td><label>
+                            Name:
+                        </label></td>
+                        <td>
+                            <input type="text" value={this.state.name} onChange={this.handleChangeName}/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Password:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" value={this.state.pwd} onChange={this.handleChangePwd}/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" className="submit"  value="Submit" onClick={this.handleSubmit}/>
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <span >{this.state.msg}</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        );
     }
-
-    }
+}
 const error = () => (
-
-        <h2>Invalid :) </h2>
-
-
+    <h2>Invalid :) </h2>
 );
 
-
-
-    export default LoginPage;
+export default LoginPage;

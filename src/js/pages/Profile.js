@@ -12,8 +12,6 @@ class ProfilePage extends React.Component {
                 country: '',
                 Birthday: ''
             };
-
-
     }
 
     componentDidMount() {
@@ -30,32 +28,27 @@ class ProfilePage extends React.Component {
                 {country: 'Italy', Birthday:'Feb 12'});
         }
 
-
     }
 
 
     render (){
-
         return (
             <div className="profileStyle">
-
-            <table className="loginStyle">
-
-                <tbody >
-
-                <tr><td >Name :</td>
-                    <td>{this.state.name}
-                   </td></tr>
-                <tr><td>Password :</td>
-                    <td>{this.state.pwd}</td></tr>
-                <tr><td>Country :</td>
-                    <td>{this.state.country}</td></tr>
-                <tr><td>Birthday :</td>
-                    <td>{this.state.Birthday}</td></tr>
-                </tbody>
-            </table>
+              <table className="loginStyle">
+                    <tbody >
+                    <tr><td >Name :</td>
+                        <td>{this.state.name}
+                       </td></tr>
+                    <tr><td>Password :</td>
+                        <td>{this.state.pwd}</td></tr>
+                    <tr><td>Country :</td>
+                        <td>{this.state.country}</td></tr>
+                    <tr><td>Birthday :</td>
+                        <td>{this.state.Birthday}</td></tr>
+                    </tbody>
+                </table>
             </div>
-    )
+        )
     }
 }
 

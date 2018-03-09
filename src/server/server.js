@@ -3,8 +3,8 @@ require('babel-core/register');
 const Hapi=require('hapi');
 // Create a server with a host and port
 const server=Hapi.server({
-    host:'localhost',
-    port:8000
+    host: 'localhost',
+    port: 8000
 });
 
 server.route({
@@ -12,10 +12,10 @@ server.route({
     path: '/login/{username}',
     handler: (request, h) => {
         let status=validateuser(request.params.username);
-        console.log(status);
         return h.response().code(status)
     }
 });
+
 server.route({
     method: 'GET',
     path: '/Profile',
