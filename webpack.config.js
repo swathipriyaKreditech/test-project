@@ -9,7 +9,14 @@ module.exports = {
     devServer: {
         contentBase: "./dist",
         historyApiFallback: true,
-        inline: true
+        inline: true,
+        proxy: {
+            "/api": {
+                target: "http://localhost:8000",
+                pathRewrite: {"^/api" : ""}
+
+            }
+        }
     },
     module: {
         rules: [

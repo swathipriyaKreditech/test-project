@@ -1,12 +1,15 @@
 import React from "react";
 import { Link} from "react-router-dom";
+import axios from 'axios';
+
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state =
             {
                 name: '',
-                pwd: ''
+                pwd: '',
+                msg: ''
             };
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleChangePwd = this.handleChangePwd.bind(this);
@@ -17,25 +20,33 @@ class LoginPage extends React.Component {
         const target = event.target;
         this.setState(
             {name: target.value});
-        localStorage.setItem('username',target.value)
-
     }
 
     handleChangePwd(event) {
         const target = event.target;
         this.setState(
             {pwd: target.value});
-        localStorage.setItem('password',target.value)
     }
 
-    handleSubmit(event) {
-
-        event.preventDefault();
+    handleSubmit() {
+        axios
+            .get("/api/login/"+this.state.name)
+            .then(res =>{
+                if(res.status == '200')
+                {
+                    localStorage.setItem('username',this.state.name);
+                    localStorage.setItem('password',this.state.pwd);
+                    this.props.history.push('/Profile');
+                }
+            })
+            .catch(err => {
+                this.setState(
+                    {msg: 'User not found'});
+            });
     }
 
     render() {
         return (
-
             <form  className="formStyle" onSubmit={this.handleSubmit}>
                 <br/>
                 <br/>
@@ -51,7 +62,6 @@ class LoginPage extends React.Component {
                     <tr>
                         <td>
                             <label>
-
                                 Password:
                             </label>
                         </td>
@@ -64,18 +74,23 @@ class LoginPage extends React.Component {
                     <tr>
                         <td></td>
                         <td>
-
-                            <Link className="submit" to="/Profile" onChange={this.handleSubmit}>Submit</Link>
-
+                            <input type="button" className="submit"  value="Submit" onClick={this.handleSubmit}/>
                         </td>
                     </tr>
-
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <span >{this.state.msg}</span></td>
+                    </tr>
                     </tbody>
                 </table>
             </form>
         );
     }
 }
-
+const error = () => (
+    <h2>Invalid :) </h2>
+);
 
 export default LoginPage;

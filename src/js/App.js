@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import LoginPage from './pages/Login';
 import ProfilePage from './pages/Profile';
-import './styles.scss';
+import '../styles/styles.scss';
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,6 @@ class App extends React.Component {
                     <Link  to="/Home">Home</Link>
                     <Link  to="/login">Login</Link>
                     <Link to="/news">News</Link>
-
                     <Link to="/contact">Contact</Link>
                     <Link to="/about">About</Link>
 
